@@ -46,6 +46,8 @@ import com.example.basiccodelabcompose.components.GreetingList
 import com.example.basiccodelabcompose.components.OnboardingScreen
 import com.example.basiccodelabcompose.lessons.FirstLesson
 
+const val LESSON_ONE = "Lição 1"
+const val SAMPLE = "Sample"
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -60,21 +62,21 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun MyApp(modifier: Modifier = Modifier) {
-    var state by remember { mutableStateOf("Sample") }
+    var state by remember { mutableStateOf(SAMPLE) }
 
     Surface(modifier, color = MaterialTheme.colorScheme.background) {
 
         when (state) {
-            "Lição 1" -> FirstLesson()
+            LESSON_ONE -> FirstLesson()
             else -> {
                 Column {
                     Button(
                         modifier = Modifier
                             .fillMaxWidth()
                             .wrapContentHeight(),
-                        onClick = { state = "Lição 1" }
+                        onClick = { state =  LESSON_ONE }
                     ) {
-                        Text(text = "Lição 1", fontSize = 24.sp)
+                        Text(text =  LESSON_ONE, fontSize = 24.sp)
                     }
                 }
             }
