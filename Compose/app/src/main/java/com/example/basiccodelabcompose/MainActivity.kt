@@ -44,6 +44,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.basiccodelabcompose.components.GreetingList
 import com.example.basiccodelabcompose.components.OnboardingScreen
+import com.example.basiccodelabcompose.lessons.FirstLesson
 
 
 class MainActivity : ComponentActivity() {
@@ -78,16 +79,5 @@ fun MyApp(modifier: Modifier = Modifier) {
                 }
             }
         }
-    }
-}
-
-@Composable
-fun FirstLesson() {
-    var shouldShowOnboarding by rememberSaveable { mutableStateOf(true) }
-
-    if (shouldShowOnboarding) {
-        OnboardingScreen(onContinueClicked = { shouldShowOnboarding = false })
-    } else {
-        GreetingList()
     }
 }
