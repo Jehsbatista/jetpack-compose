@@ -5,8 +5,8 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
-import com.example.basiccodelabcompose.components.GreetingList
-import com.example.basiccodelabcompose.components.OnboardingScreen
+import com.example.basiccodelabcompose.components.molecule.GreetingList
+import com.example.basiccodelabcompose.components.organism.OnboardingScreen
 
 @Composable
 fun FirstLesson() {
