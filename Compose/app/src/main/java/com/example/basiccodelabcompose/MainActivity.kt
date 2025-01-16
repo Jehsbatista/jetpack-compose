@@ -25,7 +25,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.basiccodelabcompose.lessons.FirstLesson
-import com.example.basiccodelabcompose.lessons.SecondLesson
+import com.example.basiccodelabcompose.lessons.SearchBar
 
 const val LESSON_ONE = "Lição 1"
 const val LESSON_TWO = "Lição 2"
@@ -36,7 +36,8 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             BasicsCodelabTheme {
-                MyApp(modifier = Modifier.fillMaxSize())
+//               MyApp(modifier = Modifier.fillMaxSize())
+                SearchBar()
             }
         }
     }
@@ -50,7 +51,7 @@ fun MyApp(modifier: Modifier = Modifier) {
 
         when (state) {
             LESSON_ONE -> FirstLesson()
-            LESSON_TWO -> SecondLesson()
+//            LESSON_TWO -> SecondLesson()
             else -> {
                 Column(
                     modifier = Modifier
