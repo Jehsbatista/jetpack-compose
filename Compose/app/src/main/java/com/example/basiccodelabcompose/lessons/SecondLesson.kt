@@ -5,6 +5,8 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.heightIn
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.paddingFromBaseline
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.icons.Icons
@@ -15,6 +17,7 @@ import androidx.compose.material3.Text
 import androidx.compose.material3.TextField
 import androidx.compose.material3.TextFieldDefaults
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.layout.ContentScale
@@ -55,29 +58,33 @@ fun AlignYourBodyElement(
     modifier: Modifier = Modifier
 ) {
     Column(
-        modifier = modifier
+        modifier = modifier.padding(8.dp),
+        horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Image(
             painter = painterResource(R.drawable.picture),
             contentDescription = null,
+            contentScale = ContentScale.Crop,
             modifier = Modifier
                 .size(88.dp)
-                .clip(CircleShape),
-            contentScale = ContentScale.Crop
+                .clip(CircleShape)
         )
-        Text(text = stringResource(R.string.inversions))
+        Text(
+            text = stringResource(R.string.inversions),
+            modifier = Modifier.paddingFromBaseline(top = 24.dp, bottom = 8.dp),
+            style = MaterialTheme.typography.bodyMedium
+        )
     }
 }
 
 
-@Preview
+@Preview(showBackground = true, backgroundColor = 0xFFF5F0EE)
 @Composable
 fun AlignYourBodyElementPreview() {
     BasicsCodelabTheme {
         AlignYourBodyElement()
     }
 }
-
 
 @Preview
 @Composable
