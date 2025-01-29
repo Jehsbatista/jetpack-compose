@@ -24,8 +24,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.basiccodelabcompose.lessons.AlignYourBodyElement
 import com.example.basiccodelabcompose.lessons.FirstLesson
-import com.example.basiccodelabcompose.lessons.SearchBar
 
 const val LESSON_ONE = "Lição 1"
 const val LESSON_TWO = "Lição 2"
@@ -37,7 +37,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             BasicsCodelabTheme {
 //               MyApp(modifier = Modifier.fillMaxSize())
-                SearchBar()
+                AlignYourBodyElement()
             }
         }
     }
